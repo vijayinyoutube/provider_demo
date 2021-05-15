@@ -12,18 +12,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final navigation = Provider.of<NavigationProvider>(context);
     return Scaffold(
-      body: Consumer<NavigationProvider>(
-          builder: (context, navigationProvider, _) {
-        navigationProvider.getNavigation;
-        return Center(
-          child: ElevatedButton(
-            child: Text("Navigate to Second Page"),
-            onPressed: () {
-             navigation.updateNavigation("SecondPage");
-            },
-          ),
-        );
-      }),
+      body: Center(
+        child: ElevatedButton(
+          child: Text("Navigate to Second Page"),
+          onPressed: () {
+            navigation.updateNavigation("SecondPage");
+          },
+        ),
+      ),
     );
   }
 }

@@ -12,11 +12,8 @@ class _SecondpageState extends State<Secondpage> {
   Widget build(BuildContext context) {
     final navigation = Provider.of<NavigationProvider>(context);
     return Scaffold(
-      body: Consumer<NavigationProvider>(
-          builder: (context, navigationProvider, _) {
-        navigationProvider.getNavigation;
-        return Center(
-            child: Row(
+      body: Center(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
@@ -32,8 +29,8 @@ class _SecondpageState extends State<Secondpage> {
               },
             ),
           ],
-        ));
-      }),
+        ),
+      ),
     );
   }
 }
